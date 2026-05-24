@@ -8,13 +8,13 @@ A SQL-based analysis of 11 marketing campaigns across 4 categories, covering a f
 
 | Property | Detail |
 |---|---|
-| Source | Internal marketing database |
+| Source | Kaggle |
 | Period | February 2021 (28 days) |
 | Records | 308 rows |
 | Columns | 11 |
 | Tool | PostgreSQL |
 
-**Columns include:** `c_date`, `campaign_name`, `category`, `mark_spent`, `impressions`, `clicks`, `leads`, `orders`, `revenue`
+**Columns include:** `id`,`c_date`, `campaign_name`, `campaign_id`, `category`, `mark_spent`, `impressions`, `clicks`, `leads`, `orders`, `revenue`
 
 **Campaign categories:**
 
@@ -32,6 +32,7 @@ A SQL-based analysis of 11 marketing campaigns across 4 categories, covering a f
 ```
 marketing-analysis/
 │
+├── marketing_analysis.csv
 ├── marketing_analysis.sql      # Full query file with inline commentary
 └── README.md                   # This file
 ```
@@ -116,7 +117,7 @@ marketing-analysis/
 
 ## How to Run
 
-1. Set up a PostgreSQL instance and import the `marketing` table.
+1. Set up a PostgreSQL instance and copy the `marketing` csv.
 2. Open `marketing_analysis.sql` in your SQL client (pgAdmin, DBeaver, psql, etc.).
 3. Run queries section by section — each block is self-contained with inline commentary explaining the result.
 
